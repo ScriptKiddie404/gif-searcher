@@ -1,9 +1,15 @@
 import React from 'react'
+import { GridItem } from './GridItem';
 
-export const Grid = () => {
+
+export const Grid = ({ categories }) => {
     return (
-        <div>
-            
-        </div>
-    )
+        <>
+            {
+                categories.map(category => (
+                    <GridItem category={category} key={category} />
+                ))
+            }
+        </>
+    );
 }

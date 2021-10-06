@@ -1,12 +1,19 @@
 import React from 'react'
 import { useState } from 'react';
+import { fetchGifs } from '../helpers/fetchGifs';
 
-export const AddCategory = () => {
+export const AddCategory = ({ setCategories }) => {
 
     const [inputState, setinputState] = useState('');
 
     const handleSubmit = (e) => {
+
         e.preventDefault();
+
+        if (inputState.trim().length > 0) {
+            setCategories(categories => [...categories, inputState]);
+            setinputState('');
+        }
 
     }
 
