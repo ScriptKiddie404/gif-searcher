@@ -3,6 +3,8 @@ import { GridItem } from './GridItem';
 
 
 export const Grid = ({ categories }) => {
+
+
     return (
         <>
             {

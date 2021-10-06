@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-import { fetchGifs } from '../helpers/fetchGifs';
 
 export const AddCategory = ({ setCategories }) => {
 
