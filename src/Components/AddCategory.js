@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-export const AddCategory = ({ setCategories }) => {
+export const AddCategory = ({ setCategory }) => {
 
     const [inputState, setinputState] = useState('');
 
@@ -10,7 +10,7 @@ export const AddCategory = ({ setCategories }) => {
         e.preventDefault();
 
         if (inputState.trim().length > 0) {
-            setCategories(inputState);
+            setCategory(inputState);
             setinputState('');
         }
 

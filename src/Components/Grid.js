@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from 'react'
 import { GridItem } from './GridItem';
-import { fetchGifs } from '../helpers/fetchGifs';
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 
-export const Grid = ({ categories }) => {
+export const Grid = ({ category }) => {
 
-    const [images, setimages] = useState([]);
 
-    useEffect(() => {
-
-        fetchGifs(categories).then(data => {
-            setimages(data);
-        });
-
-    }, [categories]);
+    const { data: gifs, loading } = useFetchGifs(category);
 
 
     return (
         <>
-            {
-                images.map(image => (
-                    <GridItem url={image.url} title={image.title} key={image.id} />
-                ))
-            }
+            <h3>{category}</h3>
+            
+            <div>
+                {
+                    gifs.map(gif => (
+                        <GridItem url={gif.url} title={gif.title} key={gif.id} />
+                    ))
+                }
+            </div>
         </>
     );
 }

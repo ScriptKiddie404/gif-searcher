@@ -4,14 +4,14 @@ import { Grid } from './Components/Grid';
 
 export const App = () => {
 
-    const [categories, setCategories] = useState('');
+    const [category, setCategory] = useState('Dog');
 
     return (
         <>
             <h1>Gif Searcher App</h1>
-            <AddCategory setCategories={setCategories} />
+            <AddCategory setCategory={setCategory} />
             <hr />
-            <Grid categories={categories} />
+            <Grid category={category} />
         </>
     )
 }
