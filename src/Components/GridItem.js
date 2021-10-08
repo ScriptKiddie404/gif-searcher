@@ -1,9 +1,7 @@
 import React from 'react';
 
-export const GridItem = ({ category }) => {
+export const GridItem = ({ url, title }) => {
     return (
-        <div>
-            {category}
-        </div>
-    )
+        <img src={url} alt={title} />
+    );
 }

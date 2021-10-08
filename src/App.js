@@ -4,7 +4,7 @@ import { Grid } from './Components/Grid';
 
 export const App = () => {
 
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState('');
 
     return (
         <>
