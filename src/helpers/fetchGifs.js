@@ -9,7 +9,7 @@ export const fetchGifs = async (category) => {
         return {
             id: gif.id,
             title: gif.tile,
-            url: gif.images.downsized_medium.url
+            url: gif.images.fixed_height.url
         };
     });
 

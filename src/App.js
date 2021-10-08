@@ -8,9 +8,10 @@ export const App = () => {
 
     return (
         <>
-            <h1>Gif Searcher App</h1>
-            <AddCategory setCategory={setCategory} />
-            <hr />
+            <div className="search_section">
+                <h1>GIF SEARCHER APP</h1>
+                <AddCategory setCategory={setCategory} />
+            </div>
             <Grid category={category} />
         </>
     )

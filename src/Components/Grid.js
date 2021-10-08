@@ -5,13 +5,12 @@ import { useFetchGifs } from '../hooks/useFetchGifs';
 export const Grid = ({ category }) => {
 
 
-    const { data: gifs, loading } = useFetchGifs(category);
+    const { data: gifs } = useFetchGifs(category);
 
 
     return (
         <>
-            {loading ? `Cargando gifs de ${category}` : null}
-            <div>
+            <div className="general_grid">
                 {
                     gifs.map(gif => (
                         <GridItem url={gif.url} title={gif.title} key={gif.id} />
