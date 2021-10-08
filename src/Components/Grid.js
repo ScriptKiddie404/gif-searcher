@@ -10,8 +10,7 @@ export const Grid = ({ category }) => {
 
     return (
         <>
-            <h3>{category}</h3>
-            
+            {loading ? `Cargando gifs de ${category}` : null}
             <div>
                 {
                     gifs.map(gif => (

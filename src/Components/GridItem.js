@@ -1,7 +1,8 @@
 import React from 'react';
 
 export const GridItem = ({ url, title }) => {
+    // https://animate.style/
     return (
-        <img src={url} alt={title} />
+        <img className={"animate__animated animate__backInUp"} src={url} alt={title} />
     );
 }
