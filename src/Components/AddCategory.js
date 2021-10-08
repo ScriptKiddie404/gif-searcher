@@ -10,7 +10,7 @@ export const AddCategory = ({ setCategories }) => {
         e.preventDefault();
 
         if (inputState.trim().length > 0) {
-            setCategories(categories => inputState);
+            setCategories(inputState);
             setinputState('');
         }
 
